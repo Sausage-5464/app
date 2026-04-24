@@ -11,7 +11,11 @@ export default function App() {
       
       {/* Platform.OS 可以用来判断当前是运行在 iOS 还是 Android 上 */}
       <Text style={styles.subtitle}>
-        当前运行环境: {Platform.OS === 'ios' ? '🍎 iOS' : '🤖 Android'}
+        当前运行环境: {
+          Platform.OS === 'ios' ? '🍎 iOS' : 
+          Platform.OS === 'android' ? '🤖 Android' : 
+          Platform.OS === 'web' ? '🌐 Web' : '❓ 未知'
+        }
       </Text>
 
       <View style={styles.counterBox}>
